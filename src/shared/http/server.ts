@@ -1,12 +1,14 @@
+import 'reflect-metadata';
 import * as dotenv from 'dotenv';
 import express from 'express';
+import '../typeorm';
 import {ExceptionHandlerGlobal} from './middlewares/ErrorsMiddleware';
 import {ChangeHeaderXPoweredXMiddleware} from './middlewares/ChangeHeaderXPowered';
 import 'express-async-errors';
 import cors from 'cors';
 import '../container';
 import morganBody from 'morgan-body';
-import {routes} from '../routes';
+import {routes} from './routes';
 import {morganBodyOptions} from '../../logs/config/MorganBodyOptions';
 
 dotenv.config();
